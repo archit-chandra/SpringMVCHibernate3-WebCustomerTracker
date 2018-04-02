@@ -4,7 +4,10 @@
         <title>HomePage</title>
     </head>
     <body>
-        <h2>Welcome to the new project</h2>
+        <h2>Welcome to home page</h2>
+        <hr>
+        <a href="/customer/list">Customer List</a>
+        <br><br>
     
     </body>
 </html>
