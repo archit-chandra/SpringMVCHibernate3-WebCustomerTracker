@@ -1,0 +1,2 @@
+Redirecting a page from homepage.jsp -> customer-list.jsp
+<% response.sendRedirect("customer-list"); %>
