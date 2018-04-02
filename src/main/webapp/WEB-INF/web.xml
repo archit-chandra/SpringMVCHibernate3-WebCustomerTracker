@@ -6,6 +6,11 @@
 
     <display-name>web-customer-tracker</display-name>
 
+    <welcome-file-list>
+        <welcome-file>homepage.html</welcome-file>
+        <welcome-file>homepage.jsp</welcome-file>
+    </welcome-file-list>
+
     <!-- Spring MVC Configs -->
 
     <!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
