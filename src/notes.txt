@@ -1,2 +1,15 @@
 Redirecting a page from homepage.jsp -> customer-list.jsp
-<% response.sendRedirect("customer-list"); %>
+<% response.sendRedirect("customer/list"); %>
+
+
+Customer DAO <-> Session Factory <-> Data Source <-> DATABASE
+                                     connection info
+                                     userid
+                                     password
+
+@Repository annotations for DAOs
+
+@Component
+    -> @Controller (Controllers)
+    -> @Repository (DAOs) - translates any Jdbc related exceptions
+                          - any checked exception thrown will be translated to unchecked exception
