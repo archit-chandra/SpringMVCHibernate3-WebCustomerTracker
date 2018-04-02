@@ -1,5 +1,5 @@
 Redirecting a page from homepage.jsp -> customer-list.jsp
-<% response.sendRedirect("customer-list"); %>
+<% response.sendRedirect("customer/list"); %>
 
 
 Customer DAO <-> Session Factory <-> Data Source <-> DATABASE
