@@ -22,6 +22,11 @@
             <div id="container">
                 <h3>Save Customer</h3>
                 <form:form action="saveCustomer" modelAttribute="customer" method="post">
+
+                    <%--need to associate this data with customer id--%>
+                    <%--or else new row will be created in db with new customer--%>
+                    <form:hidden path="id"></form:hidden>
+
                     <table>
                         <tbody>
                         <tr>
