@@ -35,12 +35,22 @@
                             <c:param name="customerId" value="${customer.id}"></c:param>
                         </c:url>
 
+                        <%--construct an 'delete' link with customer id--%>
+                        <c:url var="deleteLink" value="/customer/delete">
+                            <c:param name="customerId" value="${customer.id}"></c:param>
+                        </c:url>
+
                         <tr>
                             <td>${customer.firstName}</td>
                             <td>${customer.lastName}</td>
                             <td>${customer.email}</td>
                                 <%--display the updae link--%>
-                            <td><a href="${updateLink}">Update</a></td>
+                            <td>
+                                <a href="${updateLink}">Update</a>
+                                |
+                                <a href="${deleteLink}"
+                                   onclick="if (!(confirm('Are you sure?'))) return false;">Delete</a>
+                            </td>
                         </tr>
                     </c:forEach>
                 </table>
