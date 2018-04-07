@@ -45,9 +45,12 @@
                             <td>${customer.lastName}</td>
                             <td>${customer.email}</td>
                                 <%--display the updae link--%>
-                            <td><a href="${updateLink}">Update</a></td>
-                            |
-                            <td><a href="${deleteLink}">Delete</a></td>
+                            <td>
+                                <a href="${updateLink}">Update</a>
+                                |
+                                <a href="${deleteLink}"
+                                   onclick="if (!(confirm('Are you sure?'))) return false;">Delete</a>
+                            </td>
                         </tr>
                     </c:forEach>
                 </table>
