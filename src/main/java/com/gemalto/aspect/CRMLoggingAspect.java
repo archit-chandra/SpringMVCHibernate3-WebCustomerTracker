@@ -1,6 +1,7 @@
 package com.gemalto.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -51,4 +52,18 @@ public class CRMLoggingAspect {
     }
 
     // add @AfterReturning advice
+    @AfterReturning(
+            pointcut = "forAppFlow()",
+            returning = "result"
+    )
+    public void afterReturning(JoinPoint joinPoint, Object result) {
+
+        // display method we are calling
+        String method = joinPoint.getSignature().toShortString();
+        logger.info("====>>>> in @AfterReturning: from method : " + method);
+
+        // display the data returned
+        logger.info("====>>>> result : " + result);
+
+    }
 }
