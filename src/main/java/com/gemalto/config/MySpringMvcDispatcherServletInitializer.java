@@ -1,5 +1,6 @@
 package com.gemalto.config;
 
+import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -10,9 +11,9 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  */
 public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
+    @Nullable
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        // TODO Auto-generated method stub
         return null;
     }
 
