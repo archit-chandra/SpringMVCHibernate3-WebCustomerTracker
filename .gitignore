@@ -1,2 +1,4 @@
 .idea/
 WebCustomerTracker.iml
+target/
+*.orig

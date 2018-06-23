@@ -1,0 +1,26 @@
+Redirecting a page from homepage.jsp -> customer-list.jsp
+<% response.sendRedirect("customer/list"); %>
+
+
+Customer DAO <-> Session Factory <-> Data Source <-> DATABASE
+                                     connection info
+                                     userid
+                                     password
+
+@Repository annotations for DAOs
+
+@Component
+    -> @Controller (Controllers)
+    -> @Repository (DAOs) - translates any Jdbc related exceptions
+                          - any checked exception thrown will be translated to unchecked exception
+    -> @Service - Spring will automatically register the Service implementation when Component Scanning
+
+
+Customer Controller <-> Customer Service <-> Customer DAO
+                        (service layer)
+
+Purpose of Service Layer:
+-------------------------
+- Implementation of a Service Facade design pattern
+- Intermediate layer for custom business logic
+- Integrate data from multiple sources (DAO/repositories)
